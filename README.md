@@ -5,7 +5,7 @@ Tested with mainline nginx version 1.11.5.
 
 ## Description
 Packets are sent over UDP during log phase (`NGX_HTTP_LOG_PHASE`) since it's made specially for such kind of things.
-There is one memory allocation per incoming request to include uri's CRC-32 checksum. It possibly can be avoided at the cost of destructive changes of urs's `data` field. To achieve this we need to write extra 4 bytes for CRC-32, so uri itself can be compressed somehow to become 4 bytes less, but it barely works for short uris (e.g. uri `/` is 1 byte long). Another possible approach is to preallocate enough buffers and use them to serve requests.
+There is one memory allocation per incoming request to include uri's CRC-32 checksum. It possibly can be avoided at the cost of destructive changes of uri's `data` field. To achieve this we need to write extra 4 bytes for CRC-32, so uri itself can be compressed somehow to become 4 bytes less, but it barely works for short uris (e.g. uri `/` is 1 byte long). Another possible approach is to preallocate enough buffers and use them to serve requests.
 
 # Configuration directives
 
