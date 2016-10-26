@@ -8,6 +8,7 @@ There is one memory allocation per incoming request to include uri's CRC-32 chec
 # Configuration directives
 
 syntax: `udplog <hostname> <port>`
+
 context: `main`
 
 # Example configuration
