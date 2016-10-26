@@ -80,7 +80,7 @@ ngx_http_udplog_handler(ngx_http_request_t *r) {
 
     ngx_log_debug0(NGX_LOG_DEBUG_HTTP, r->connection->log, 0, "udplog http handler");
 
-    len = (r->uri).len + 10; // 10 bytes for hex-formatted 32bit int, like 0xAABBCCDD
+    len = (r->uri).len + 12; // 12 bytes for space, hex-formatted 32bit int, like 0xAABBCCDD, and a newline char.
     line = ngx_pnalloc(r->pool, len);
 
     if (line == NULL) {
