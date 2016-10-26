@@ -36,7 +36,7 @@ To test module locally, use:
 
 `$ netcat -ul PORT`
 
-e.g. `netcat -ul 9999` to listen on localhost
+e.g. `$ netcat -ul 9999` to listen on localhost
 
 ## server.py
 
