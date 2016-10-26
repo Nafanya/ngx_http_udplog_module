@@ -25,3 +25,19 @@ http {
     }
 }
 ```
+
+# Testing
+
+This module can be tested in two ways: with `netcat` utility or with `server.py`.
+
+## netcat
+
+To test module locally, use:
+
+`$ netcat -ul PORT`
+
+e.g. `netcat -ul 9999` to listen on localhost
+
+## server.py
+
+This is a python3 script, adjust `HOST` and `PORT` variables in it and you are ready to go. Defaults are localhost and port 9999.
